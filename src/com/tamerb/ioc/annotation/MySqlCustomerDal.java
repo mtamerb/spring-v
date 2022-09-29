@@ -1,7 +1,13 @@
-package com.tamerb.intro;
+package com.tamerb.ioc.annotation;
+
+
+import org.springframework.beans.factory.annotation.Value;
 
 public class MySqlCustomerDal implements ICustomerDal {
 
+
+    @Value("${database.connectionString}")
+    private String connectionString;
 
     public String getConnectionString() {
         return connectionString;
@@ -11,7 +17,7 @@ public class MySqlCustomerDal implements ICustomerDal {
         this.connectionString = connectionString;
     }
 
-    private String connectionString;
+
 
 
 

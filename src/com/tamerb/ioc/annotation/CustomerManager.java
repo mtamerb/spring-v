@@ -1,4 +1,5 @@
-package com.tamerb.intro;
+package com.tamerb.ioc.annotation;
+
 
 public class CustomerManager implements ICustomerService {
 
@@ -6,6 +7,7 @@ public class CustomerManager implements ICustomerService {
 
 
 
+    //constructor injection
     public CustomerManager(ICustomerDal customerDal) {
         this.customerDal = customerDal;
     }

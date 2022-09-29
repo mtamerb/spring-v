@@ -8,11 +8,16 @@ public class Main {
 
         //configuration context
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("com/tamerb/intro/applicationContext.xml");
 
 
-        CustomerManager customerManager = new CustomerManager(new MySqlCustomerDal());
-        customerManager.add();
+        ICustomerService customerService = context.getBean("service", ICustomerService.class);
+
+
+       /* CustomerManager customerManager =
+                new CustomerManager(context.getBean("database", ICustomerDal.class));*/
+
+        customerService.add();
 
 
     }
