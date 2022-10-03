@@ -3,7 +3,7 @@ package com.tamerb.ioc.annotation;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
 
@@ -14,6 +14,7 @@ public class Main {
         ICustomerService customerService = appContext.getBean("service", ICustomerService.class);
         customerService.add();
 
+        
 
     }
 }

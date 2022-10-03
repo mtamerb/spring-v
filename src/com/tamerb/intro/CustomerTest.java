@@ -2,7 +2,7 @@ package com.tamerb.intro;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class CustomerTest {
 
     public static void main(String[] args) {
 
